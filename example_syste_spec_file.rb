@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Food management function', type: :system do
   before do
-    @restaurant = Restaurant.create!( id:1, name: 'mon restaurant', adress: 'cotonou', phone: '12345678' )
+    @food = Food.create!( id:1, name: 'rice', description: 'white rice', price: '2000' )
   end
 
   describe "Function to publish a new food" do
