@@ -19,6 +19,16 @@ RSpec.describe 'Food management function', type: :system do
        expect(page).to have_content 'Riz au gras'
       end
  end
+  
+  describe "Function to display the list of foods" do
+      it "The created foods are displayed" do
+
+        FactoryBot.create(:food)
+        visit foods_path
+        
+        expect(page).to have_content 'Food'
+      end
+ end
 
 #*******************************************************************************#
 
